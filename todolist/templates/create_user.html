@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Delius&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>ToDo List <a href="/">Home</a></header>
+  <main class="container create_user_page">
+    <form action="#" method="post">
+      {% csrf_token %}
+      {% if messages %}
+        {% for message in messages %}
+          <h4 style="color: firebrick;"> {{message}} </h4>
+          <br>
+        {% endfor %}
+      {% endif %}
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="email" name="email" id="email" placeholder="Email" required>
+      <input type="password" name="password" id="password" placeholder="Password" required>
+      <input type="password" name="password_again" id="password_again" placeholder="Password Again" required>
+      <input type="submit" value="Sign Up" class="button">
+
+    </form>
+    <p class="other_links">Have Account?   <a href="/login"> Login</a></p>
+  </main>
+</body>
+</html>
