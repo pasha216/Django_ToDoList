@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-e@gxymizv%!b0ujz@m3_wpz&g0fs6btv87(m72p7#cs5mxljb8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://django-todolist-bjxt.onrender.com', '*']
 
 
 # Application definition
@@ -134,6 +134,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = "login"
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 django_heroku.settings(locals())
