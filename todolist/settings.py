@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-e@gxymizv%!b0ujz@m3_wpz&g0fs6btv87(m72p7#cs5mxljb8
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://django-todolist-bjxt.onrender.com', '*']
-
+CSRF_TRUSTED_ORIGINS = ['https://django-todolist-bjxt.onrender.com']
 
 # Application definition
 
